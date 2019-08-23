@@ -1,0 +1,64 @@
+
+
+<div class="background-img">
+    <app-slider></app-slider>
+
+    <app-loan-form></app-loan-form>
+    
+    <!-- Start your project here-->
+    <!-- <div style="height: 100vh">
+      <div class="flex-center flex-column">
+        <h1 class="animated fadeIn mb-4">Material Design for Bootstrap (Angular)</h1>
+    
+        <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
+        <h6 class="animated fadeIn mb-3">Start browsing <a href="https://mdbootstrap.com/angular">documentation</a>.</h6>
+    
+        <p class="animated fadeIn text-muted">MDB Team</p>
+      </div>
+    </div> -->
+    <!-- /Start your project here-->
+    <!-- <div class="flex-center flex-column">
+    <div class="card testimonial-card">
+        <h1 class="animated fadeIn mb-4">Material Design for Bootstrap (Angular)</h1>
+    
+        <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
+        <h6 class="animated fadeIn mb-3">Start browsing <a href="https://mdbootstrap.com/angular">documentation</a>.</h6>
+    
+        <p class="animated fadeIn text-muted">MDB Team</p>
+    
+      <input type="text" class="form-control"><br>
+      <input type="text" class="form-control">
+    </div>
+    </div> -->
+     <br>   
+     
+    <div class="container flex-center">
+        
+     <table class="table">
+        <thead class="black white-text">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Names</th>
+            <th scope="col">Email</th>
+            <th scope="col">Zipcode</th>
+            <th scope="col">Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users$">
+            <th scope="row"> {{ user.id }}</th>
+            <td>{{ user.name }} </td>
+            <td>{{ user.email }} </td>
+            <td>{{ user.address.zipcode }}</td>
+            <td>{{ user.phone }}</td>
+          </tr>
+        
+        </tbody>
+      </table>
+      <div >
+        <br>
+     </div>
+     </div>
+   
+    
+    

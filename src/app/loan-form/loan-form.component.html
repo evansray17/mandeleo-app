@@ -1,0 +1,429 @@
+
+<p class="sub-heading mt-5">LOAN APPLICATION FORM</p>
+
+<div style="height: 40vh container " class="mt-5">
+                
+        <div class="">
+            <div class="container-form">
+
+                        
+                    <form  [formGroup]="myForm" novalidate (ngSubmit)="onSubmit()">
+                            <div class="col-sm-12">
+                    <span class="form-header">PERSONAL DETAILS</span>
+                                <div class="row mt-3">
+<!--First row-->                                 
+                                    <div class="col-sm">
+                                            <label for="firstname">First name*</label>
+                                            <input type="text" class="form-control"
+                                            name="firstname" formControlName="firstname">
+                                            <span  class="error" *ngIf="firstname.invalid && firstname.touched">
+                                            Please Enter your First name
+                                            </span>    
+                                    </div>
+                                    <div class="col-sm">
+                                            <label for="middlename">Middle name*</label>
+                                            <input type="text" class="form-control" 
+                                            name="middlename" formControlName="middlename">
+                                            <span  class="error" *ngIf="middlename.invalid && middlename.touched ">
+                                            Please Enter your Middle name
+                                            </span>    
+                                    </div>
+                                    <div class="col-sm">
+                                            <label for="lastname">Middle Name*</label>
+                                            <input type="text" class="form-control" 
+                                            name="lastname" formControlName="lastname">
+                                            <span class="error" *ngIf="lastname.invalid  && lastname.touched">
+                                            Please Enter your Last name.
+                                            </span>    
+                                    </div>
+                                </div>
+                            </div>
+<!--Second row-->
+                            <div class="col-sm-12 my-2">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <label for="idNo">ID/passport Number*</label>
+                                            <input type="text" class="form-control" 
+                                            name="idNo" formControlName="idNo">
+                                            <span  class="error" *ngIf="idNo.invalid && idNo.touched ">
+                                            Please Enter your ID/passport Number
+                                            </span>    
+                                    </div>
+                                    <div class="col-sm">
+                                            <label for="dBirth">Date of Birth*</label>
+                                            <input type="date" class="form-control datepicker" 
+                                            name="dBirth" formControlName="dBirth">
+                                            <span  class="error" *ngIf="dBirth.invalid && dBirth.touched ">
+                                            Please Enter your Date of Birth
+                                            </span>    
+                                    </div>
+                                    <div class="col-sm">
+                                            <label for="hAddress">Home Address*</label>
+                                            <input type="number" class="form-control" 
+                                            name="hAddress" formControlName="hAddress">
+                                            <span class="error" *ngIf="hAddress.invalid  && hAddress.touched">
+                                            Please Enter your Home Address.
+                                            </span>    
+                                    </div>
+                                    </div>
+                                </div>
+ <!--Second row-->
+                            <div class="col-sm-12 my-2">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <label for="hTelNo">Home Tel Number*</label>
+                                            <input type="number" class="form-control" 
+                                            name="hTelNo" formControlName="hTelNo">
+                                            <span  class="error" *ngIf="hTelNo.invalid && hTelNo.touched ">
+                                            Please Enter your Home Tel Number
+                                            </span>    
+                                    </div>
+                                    <div class="col-sm">
+                                            <label for="mobileNo">Mobile Number*</label>
+                                            <input type="number" class="form-control" 
+                                            name="mobileNo" formControlName="mobileNo">
+                                            <span  class="error" *ngIf="mobileNo.invalid && mobileNo.touched ">
+                                            Please Enter your Mobile Number.
+                                            </span>    
+                                    </div>
+                                    <div class="col-sm">
+                                            <label for="pinNo">Pin number*</label>
+                                            <input type="number" class="form-control" 
+                                            name="pinNo" formControlName="pinNo">
+                                            <span class="error" *ngIf="pinNo.invalid  && pinNo.touched">
+                                            Please Enter your Pin number.
+                                            </span>    
+                                    </div>
+                                    </div>
+                                </div>
+<!--Second row-->
+                    <div class="col-sm-12">
+                                   
+                            <div class="row">
+                                    
+                                <div class="col-sm">
+                                            <label for="officeNo">Office Tel number*</label>
+                                            <input type="number" class="form-control" 
+                                            name="officeNo" formControlName="officeNo">
+                                            <span class="error" *ngIf="officeNo.invalid  && officeNo.touched">
+                                            Please Enter your Office Tel number.
+                                            </span>    
+                                        </div>
+                                <div class="col-sm">
+                                            <label for="emailAdd">Email Address*</label>
+                                            <input type="email" class="form-control" 
+                                            name="emailAdd" formControlName="emailAdd">
+                                            <span class="error" *ngIf="emailAdd.invalid && emailAdd.touched">
+                                            Please Enter your Email Address.
+                                            </span>    
+                                        </div>
+                                <div class="col-sm">
+                                            <label for="maritualSts">Maritual  Status*</label>
+                                            <select class="mdb-select md-form" class="form-control" 
+                                                    name="maritualSts" formControlName="maritualSts">
+                                                            <option value="" disabled selected>Choose your Maritual Status</option>
+                                                            <option value="1">Single</option>
+                                                            <option value="2">Married</option>
+                                                            <option value="3">Others</option>
+                                                          </select>
+                                            <span class="error" *ngIf="maritualSts.invalid  && maritualSts.touched">
+                                            Please Enter your Maritual  Status.
+                                            </span>    
+                                        </div>
+                            </div>
+                        </div>
+<!--third row-->
+                        <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm">
+                                            <label for="numberOfD">Number of Dependents*</label>
+                                            <input type="numberOfD" class="form-control" 
+                                            name="numberOfD" formControlName="numberOfD">
+                                            <span class="error" *ngIf="numberOfD.invalid  && numberOfD.touched">
+                                            Please Enter your Number of Dependents.
+                                            </span>    
+                                        </div>    
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-sm-12 mt-3">
+                                
+                        <span class="form-header">EMPLOYMENT DETAILS</span>
+                                        <div class="row my-2">
+                                            <div class="col-sm">
+                                                    <label for="appEmp">Applicant’s Employer*</label>
+                                                    <input type="text" class="form-control" 
+                                                    name="appEmp" formControlName="appEmp">
+                                                    <span class="error" *ngIf="appEmp.invalid  && appEmp.touched">
+                                                    Please Enter your Number of Dependents.
+                                                    </span>    
+                                                </div>  
+                                                <div class="col-sm">
+                                                                <label for="phyAdd">Physical Address*</label>
+                                                                <input type="number" class="form-control" 
+                                                                name="phyAdd" formControlName="phyAdd">
+                                                                <span class="error" *ngIf="phyAdd.invalid  && phyAdd.touched">
+                                                                Please Enter your Number of Dependents.
+                                                                </span>    
+                                                            </div>    
+                                        </div>
+                                    </div>  
+                        <div class="col-sm-12">
+                                        <div class="row my-2">
+                                            <div class="col-sm">
+                                                    <label for="PostalNo">Postal Address*</label>
+                                                    <input type="number" class="form-control" 
+                                                    name="PostalNo" formControlName="PostalNo">
+                                                    <span class="error" *ngIf="PostalNo.invalid  && PostalNo.touched">
+                                                    Please Enter your Postal Address.
+                                                    </span>    
+                                                </div>  
+                                                <div class="col-sm">
+                                                                <label for="telNo">Telephone NUmber*</label>
+                                                                <input type="telNo" class="form-control" 
+                                                                name="telNo" formControlName="telNo">
+                                                                <span class="error" *ngIf="telNo.invalid  && telNo.touched">
+                                                                Please Enter your Telephone NUmber.
+                                                                </span>    
+                                                            </div>    
+                                        </div>
+                                    </div>  
+                        <div class="col-sm-12">
+                                                <div class="row my-2">
+                                                    <div class="col-sm">
+                                                            <label for="destination">
+                                                                    Designation*
+                                                            </label>
+                                                            <input type="destination" class="form-control" 
+                                                            name="destination" formControlName="destination">
+                                                            <span class="error" *ngIf="destination.invalid  && destination.touched">
+                                                            Please Enter your Destination.
+                                                            </span>    
+                                                        </div>  
+                                                <div class="col-sm">
+                                                                <label for="StaffNo">Staff Number*</label>
+                                                                <input type="StaffNo" class="form-control" 
+                                                                name="StaffNo" formControlName="StaffNo">
+                                                                <span class="error" *ngIf="StaffNo.invalid  && StaffNo.touched">
+                                                                Please Enter your Staff Number.
+                                                                </span>    
+                                                            </div>    
+                                                </div>
+                                            </div>  
+                                
+                        <div class="col-sm-12">
+                                        <div class="row my-2">
+                                            <div class="col-sm">
+                                                    <label for="empTerm">Employment terms*</label>
+                                                    <select class="mdb-select md-form" class="form-control" 
+                                                    name="empTerm" formControlName="empTerm">
+                                                            <option value="" disabled selected>Choose your Employment terms</option>
+                                                            <option value="1">Permanent</option>
+                                                            <option value="2">Casual</option>
+                                                            <option value="3">Contract</option>
+                                                            <option value="3">Others</option>
+                                                          </select>
+                                                    <span class="error" *ngIf="empTerm.invalid  && empTerm.touched">
+                                                    Please Enter your Employment terms.
+                                                    </span>    
+                                                </div>  
+                                        </div>
+                                    </div> 
+                        <div class="col-sm-12">
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                    <label for="typeOf">Type of business*</label>
+                                                    <input type="text" class="form-control" 
+                                                    name="typeOf" formControlName="typeOf">
+                                                    <span class="error" *ngIf="typeOf.invalid  && typeOf.touched">
+                                                    Please Enter your Type of business.
+                                                    </span>    
+                                                </div>
+                                            <div class="col-sm">
+                                                    <label for="yOfOp">Years of Operation*</label>
+                                                    <input type="number" class="form-control" 
+                                                    name="yOfOp" formControlName="yOfOp">
+                                                    <span class="error" *ngIf="yOfOp.invalid  && yOfOp.touched">
+                                                    Please Enter your Years of Operation.
+                                                    </span>    
+                                                </div>  
+                                        </div>
+                                    </div> 
+                        <div class="col-sm-12">
+                                        <div class="row">
+                                
+                                            <div class="col-sm">
+                                                    <label for="bIncome">Business income*</label>
+                                                    <input type="number" class="form-control" 
+                                                    name="bIncome" formControlName="bIncome">
+                                                    <span class="error" *ngIf="bIncome.invalid  && bIncome.touched">
+                                                    Please Enter your Business income.
+                                                    </span>    
+                                                </div>
+                                            <div class="col-sm">
+                                                    <label for="rIncome">Rental Income*</label>
+                                                    <input type="number" class="form-control" 
+                                                    name="rIncome" formControlName="rIncome">
+                                                    <span class="error" *ngIf="rIncome.invalid  && rIncome.touched">
+                                                    Please Enter your Rental Income.
+                                                    </span>    
+                                                </div>
+                                            <div class="col-sm">
+                                                    <label for="oIncome">Other incomes*</label>
+                                                    <input type="number" class="form-control" 
+                                                    name="oIncome" formControlName="oIncome">
+                                                    <span class="error" *ngIf="oIncome.invalid  && oIncome.touched">
+                                                    Please Enter your Other incomes.
+                                                    </span>    
+                                                </div>  
+                                        </div>
+                                    </div>  
+                        <div class="col-sm-12 mt-4">
+                                        <span class="form-header">BANK DETAILS</span>
+                                        <div class="row mt-3">
+                                            <div class="col-sm">
+                                                    <label for="accntName">Account Name*</label>
+                                                    <input type="text" class="form-control" 
+                                                    name="accntName" formControlName="accntName">
+                                                    <span class="error" *ngIf="accntName.invalid  && accntName.touched">
+                                                    Please Enter your Account Name.
+                                                    </span>    
+                                                </div>
+                                            <div class="col-sm">
+                                                    <label for="accountC">Account code*</label>
+                                                    <input type="number" class="form-control" 
+                                                    name="accountC" formControlName="accountC">
+                                                    <span class="error" *ngIf="accountC.invalid  && accountC.touched">
+                                                    Please Enter your Account code.
+                                                    </span>    
+                                                </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-sm">
+                                                    <label for="bName">Bank name*</label>
+                                                    <input type="text" class="form-control" 
+                                                    name="bName" formControlName="bName">
+                                                    <span class="error" *ngIf="bName.invalid  && bName.touched">
+                                                    Please Enter your Bank Name.
+                                                    </span>    
+                                                </div>
+                                            <div class="col-sm">
+                                                    <label for="bCode">Bank Code*</label>
+                                                    <input type="number" class="form-control" 
+                                                    name="bCode" formControlName="bCode">
+                                                    <span class="error" *ngIf="bCode.invalid  && bCode.touched">
+                                                    Please Enter your Bank Code.
+                                                    </span>    
+                                                </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-sm">
+                                                    <label for="branchName">Branch Name*</label>
+                                                    <input type="text" class="form-control" 
+                                                    name="branchName" formControlName="branchName">
+                                                    <span class="error" *ngIf="branchName.invalid  && branchName.touched">
+                                                    Please Enter your Branch Name.
+                                                    </span>    
+                                                </div>
+                                            <div class="col-sm">
+                                                    <label for="branchCode">Branch Code*</label>
+                                                    <input type="number" class="form-control" 
+                                                    name="branchCode" formControlName="branchCode">
+                                                    <span class="error" *ngIf="branchCode.invalid  && branchCode.touched">
+                                                    Please Enter your Branch code.
+                                                    </span>    
+                                                </div>
+                                        </div>
+                                    </div> 
+             
+                                    <div class="col-sm-12 mt-3">
+                                                <span class="form-header">LOAN PARTICULARS</span>
+                                                <div class="row mt-2">
+                                                    <div class="col-sm">
+                                                            <label for="loanType"> loan type*</label>
+                                                            <select class="mdb-select md-form" class="form-control" name="loanType" formControlName="loanType">
+                                                                    <option value="" disabled selected>Choose your Loan Type:</option>
+                                                                    <option value="1">Normal Loan</option>
+                                                                    <option value="2">Development Loan</option>
+                                                                    <option value="3">Emergency/School Fees Loan</option>
+                                                                  </select>
+                                                            <span class="error" *ngIf="loanType.invalid  && loanType.touched">
+                                                            Please Choose your loan type.
+                                                            </span>    
+                                                        </div>
+                                                </div>
+                                            </div> 
+                                <div class="col-sm-12">
+                                                <div class="row my-3">
+                                                    <div class="col-sm">
+                                                            <label for="purposeOfL">Purpose of loan*</label>
+                                                            <textarea class="form-control" name="purposeOfL" 
+                                                            formControlName="purposeOfL" cols="30" rows="5"></textarea>
+                                                            <span class="error" *ngIf="purposeOfL.invalid  && purposeOfL.touched">
+                                                            Please Enter your Purpose of loan.
+                                                            </span>    
+                                                        </div>
+                                                </div>
+                                            </div> 
+                                <div class="col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-sm">
+                                                            <label for="ammountApp">Amount applied for*</label>
+                                                            <input type="number" class="form-control" 
+                                                            name="ammountApp" formControlName="ammountApp">
+                                                            <span class="error" *ngIf="ammountApp.invalid  && ammountApp.touched">
+                                                            Please Enter your Amount applied for.
+                                                            </span>    
+                                                        </div>
+                                                </div>
+                                            </div> 
+                                           
+                                
+<!--Sixth row-->                                    
+                        <button [disabled] = "myForm.invalid" class="ml-3 my-5 btn btn-infoinfo" rounded="true" mdbWavesEffect (click)="frame.show()"data-target="#basicExample" data-toggle="modal" ng-disabled="myForm.invalid">APPLY LOAN  <i class="far fa-gem ml-1 white-text"></i></button>   
+                            
+
+<div mdbModal #frame="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog"
+aria-labelledby="myModalLabel" aria-hidden="true" (open)="onOpen($event)">
+<div class="modal-dialog modal-notify modal-success" role="document">
+  <!--Content-->
+  <div class="modal-content">
+    <!--Header-->
+    <div class="modal-header">
+      <p class="heading lead"></p>
+
+      <button type="button"  class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+        <span aria-hidden="true" class="white-text">&times;</span>
+      </button>
+    </div>
+
+    <!--Body-->
+    <div class="modal-body">
+      <div class="text-center">
+        <mdb-icon fas icon="check" size="4x" class="mb-3 animated rotateIn"></mdb-icon>
+        <p >THANKS FOR APPLING.  <br> YOU FORM HAS BEEN SUBMITTED SUCCESSFULLY.</p>
+      </div>
+    </div>
+
+    <!--Footer-->
+    
+  </div>
+  <!--/.Content-->
+</div>
+</div>  
+                            
+                    </form>
+                    1. N/B YOU WILL NEED TO FILL IN ALL THE FORM TO ENABLE THE BUTTON. <br><br>
+                    2. CONSOLE LOG YOU WILL SEE THE FORM HAS BEEN SUBMITED AND THEN IT HAS BEEN RESET TO NULL.
+
+                    <br><br>
+                    <p>3. Below have created a table fetching Data  FROM A JSONPLACEHOLDER (Fake Online REST API for Testing and Prototyping )</p>
+
+                    
+            </div>
+            
+        </div>
+      </div>
+      <!-- /Start your project here-->
+  

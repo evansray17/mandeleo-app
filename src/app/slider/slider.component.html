@@ -1,0 +1,137 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#">MCB</a></mdb-navbar-brand>
+
+    <!-- Collapsible content -->
+    <links>
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect>About MCB</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect>Careers</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                Banking Channels<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Access MCB</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Mobile Banking</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Access banking</a>
+                    
+                    
+                </div>
+            </li>
+
+        </ul>
+        <!-- Links -->
+<div class="mr-5">
+
+  <button type="button" mdbBtn color="primary" class="relative waves-light" (click)="basicModal.show()" mdbWavesEffect>LOANS IN OTHER BANKS/ FINANCIAL INSTITUTIONS ETC
+
+  </button>
+
+  <div mdbModal #basicModal="mdbModal"  class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="width:800px;" >
+        <div class="modal-header">
+          <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title w-100" id="myModalLabel">LOANS IN OTHER BANKS/ FINANCIAL INSTITUTIONS ETC</h4>
+        </div>
+        <div class="modal-body">
+          <app-table-editable></app-table-editable>
+        </div>
+        <div class="modal-footer">
+          <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Close</button>
+          <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- Search form -->
+        <form class="form-inline waves-light" mdbWavesEffect>
+            <div class="md-form my-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            </div>
+        </form>
+    </links>
+    <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+<mdb-carousel class=" carousel slide carousel-fade" [animation]="'fade'">
+    <mdb-carousel-item>
+      <div class="view w-100 " style="height:280px;" >
+        
+        <img class="d-block w-100 bg" src="" alt="" style="height:280px;">
+        <div class="mask rgba-black-light waves-light" mdbWavesEffect>
+            <div class="flex-center flex-column">
+                <p class="heading"></p>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-caption ">
+        <h1 class="h3-responsive heading pb-5">MAENDELEO COMMUNITY BANK</h1>
+        
+        <p class="sub-heading"></p>
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <div class="view w-100" style="height:280px;">
+        <img class="d-block w-100 bg2"  src="" style="height:280px;" alt="">
+        <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive heading pb-5">MAENDELEO COMMUNITY BANK</h3>
+        <p class="sub-heading"></p>
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <div class="view w-100" style="height:280px;">
+        <img class="d-block w-100 bg3"  src="" style="height:280px;" alt="">
+        <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive heading pb-5">MAENDELEO COMMUNITY BANK</h3>
+        <p class="sub-heading"></p>
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>
+
+  
+      <!-- <div class="row">
+            <div class="col-6 col-md-4">
+                    <div class="md-form ">
+                            <mdb-icon fas icon="envelope" class="prefix"></mdb-icon>
+                            <input mdbInput type="text" id="form2" class="form-control">
+                            <label for="form2">Example label</label>
+                            </div>
+            </div>
+            <div class="col-6 col-md-4"><div class="md-form ">
+                    <mdb-icon fas icon="envelope" class="prefix"></mdb-icon>
+                    <input mdbInput type="text" id="form2" class="form-control">
+                    <label for="form2">Example label</label>
+                    </div>
+                </div>
+            <div class="col-6 col-md-4">
+                    <div class="md-form ">
+                            <mdb-icon fas icon="envelope" class="prefix"></mdb-icon>
+                            <input mdbInput type="text" id="form2" class="form-control">
+                            <label for="form2">Example label</label>
+                            </div>
+            </div>
+          </div> -->

@@ -1,0 +1,19 @@
+@media all and (min-width: 768px) {
+    tr  {
+      td {
+        vertical-align: middle !important;
+      }
+      span {
+        &:not([class]) {
+          padding: 1rem 1rem;
+        }
+      }
+    }
+  }
+  
+  .table th, .table td {
+    padding: 3px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    
+}  
